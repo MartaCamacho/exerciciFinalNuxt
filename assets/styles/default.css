@@ -1,0 +1,60 @@
+body{
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 8rem;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 0;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.nuxt-link-exact-active {
+  color: white;
+}
+
+.footer-container {
+  background-color: black;
+  color: white;
+  padding: .5rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}
+
+.home-section {
+  width: 400px;
+  border: 1px solid black;
+  padding: 1rem .5rem;
+  margin-top: .5rem;
+  box-shadow: 5px 5px 10px black;
+}
+
+.home-section + .home-section {
+  margin-left: 1rem;
+}

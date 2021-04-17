@@ -1,73 +1,24 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        exercici-final-nuxt
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div class="home d-flex justify-content-center">
+    <section class="home-section">
+      <h5>Users consulted</h5>
+      <div>
+        <p v-for="(user, index) in userCoincidenceName">
+          <span class="d-flex justify-content-between mr-2 ml-2" :key="index"><span>{{user.name}}</span> <span>{{user.count}}</span></span>
+        </p>
       </div>
-    </div>
+      </section>
+    <section class="home-section">
+      <h5>Pictures consulted</h5> 
+       <div>
+        <p v-for="(picture, index) in pictureCoincidenceName">
+          <span class="d-flex justify-content-between mr-2 ml-2" :key="index"><span>{{picture.name}}</span> <span>{{picture.count}}</span></span>
+        </p>
+      </div>
+      </section>
   </div>
 </template>
 
-<script>
-export default {}
+<script src='@/scripts/index.js'>
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
