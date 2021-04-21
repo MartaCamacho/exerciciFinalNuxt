@@ -1,4 +1,13 @@
-/* import store from "./../store/index"; */
 export default {
-    name: 'Header'
+    name: 'Header',
+    computed: {
+      SearchForm: {
+        get() {
+            return this.$store.state.filters.search;
+        },
+        set(value) {
+          this.$store.commit("SetSearch", value)
+        }
+      }
+    }
   };

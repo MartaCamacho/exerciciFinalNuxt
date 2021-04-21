@@ -12,8 +12,8 @@
         </b-collapse>
         
          <b-nav-form right>
-          <b-form-input size="sm" class="mr-sm-2" value="search" placeholder="Nom d'usuari" ></b-form-input>
-          <nuxt-link to="/">
+          <b-form-input size="sm" class="mr-sm-2" value="search" placeholder="Nom d'usuari" v-model="SearchForm"></b-form-input>
+          <nuxt-link to="/UserNotFound">
             <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
           </nuxt-link>
           

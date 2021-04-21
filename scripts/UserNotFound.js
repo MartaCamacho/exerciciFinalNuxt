@@ -20,6 +20,7 @@ export default {
         this.$store.dispatch('loadUsers')
         let users = this.users;
         let usersRefresh = [];
+        console.log(this.filters.search)
         if(this.filters.search.length > 0){
             for(const user of users){
             if(user.name.toLocaleLowerCase().includes(this.filters.search)){
