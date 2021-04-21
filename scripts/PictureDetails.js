@@ -9,12 +9,7 @@ export default {
   props:{ id: [String, Number], picture: Object },
   mounted () {
     let vue = this;
-    let TheId = vue.id;
-    this.$store.dispatch('loadCurrentPicture', TheId);
+    let TheId = vue.$route.params.id;
     this.$store.dispatch('addCurrentPictureToSeen', TheId);
   },
-  computed: mapState([
-    'currentPicture',
-    'consultedPictures'
-  ])
 };

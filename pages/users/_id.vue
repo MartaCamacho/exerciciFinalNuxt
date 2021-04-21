@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <UserDetailsComponent :currentUser="currentUser" :id="id"/> -->
+    <UserDetailsComponent :currentUser="currentUser" :id="id"/>
   </div>
 </template>
 

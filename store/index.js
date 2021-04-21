@@ -22,6 +22,7 @@ export const mutations = {
   },
   setCurrentUser(state, currentUser) {
     state.currentUser = currentUser;
+    console.log(state)
   },
   setConsultedUsers(state, consultedUsers) {
     state.consultedUsers = [...state.consultedUsers, parseInt(consultedUsers)];
@@ -75,6 +76,7 @@ export const actions = {
         .then(response => response.data)
         .then(users => users.map(user => {
           if (user.id === userId){
+            console.log(userId)
             return commit('setCurrentUser', user)
           }
         }))

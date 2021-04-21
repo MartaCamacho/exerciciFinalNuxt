@@ -4,7 +4,7 @@
     <div class="user-card-container" >
       <b-card-group v-for="(picture,index) in pictures" :key="index">
         <b-card :header="picture.title" class="text-center user-card" bg-variant="dark" text-variant="white">
-          <nuxt-link :to="{ name: 'PictureDetails', params: {id: picture.id, picture: picture} }">
+          <nuxt-link :to="'/pictures/' + picture.id">
           <b-card-text><button class="btn btn-light">Veure Imatge</button></b-card-text>
           </nuxt-link>
         </b-card>

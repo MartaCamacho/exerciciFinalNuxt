@@ -1,6 +1,6 @@
 <template>
   <div>
-  <!-- <PictureDetailsComponent :currentPicture="currentPicture" :id="id"/> -->
+  <PictureDetailsComponent  :id="id"/>
   </div>
 </template>
 
